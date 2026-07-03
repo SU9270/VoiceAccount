@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>记账</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  </head>
+  <body class="prototype-page">
+    <main class="phone">
+      <div class="status-bar">
+        <span>9:41</span>
+        <div class="status-icons">
+          <i class="fa-solid fa-signal"></i>
+          <i class="fa-solid fa-wifi"></i>
+          <i class="fa-solid fa-battery-three-quarters"></i>
+        </div>
+      </div>
+
+      <header class="app-header">
+        <div>
+          <p class="eyebrow">2026 年 5 月</p>
+          <h1>记账</h1>
+        </div>
+        <i class="fa-regular fa-bell soft-text" aria-hidden="true"></i>
+      </header>
+
+      <section class="content">
+        <div class="card summary-card">
+          <div class="summary-row">
+            <span class="white-soft">本月支出</span>
+            <span class="chip"><i class="fa-solid fa-arrow-trend-down"></i> 较上月 -8%</span>
+          </div>
+          <div class="amount-xl">¥ 4,268.50</div>
+          <div class="summary-row" style="margin-top: 16px;">
+            <span class="white-soft">预算剩余 ¥ 1,731.50</span>
+            <span class="white-soft">每日均值 ¥ 137.69</span>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button class="action-btn mic">
+            <i class="fa-solid fa-microphone-lines"></i>
+            长按语音输入
+          </button>
+          <button class="action-btn manual">
+            <i class="fa-solid fa-plus"></i>
+            手动输入
+          </button>
+        </div>
+
+        <div class="section-title">
+          <h2>今日记录</h2>
+          <span class="soft-text">5 笔 · ¥318.50</span>
+        </div>
+
+        <div class="list">
+          <div class="item">
+            <div class="icon food"><i class="fa-solid fa-utensils"></i></div>
+            <div>
+              <div class="item-title">午餐 · 日式简餐</div>
+              <div class="item-meta">12:26 · 餐饮</div>
+            </div>
+            <div class="expense">-¥68</div>
+          </div>
+          <div class="item">
+            <div class="icon traffic"><i class="fa-solid fa-taxi"></i></div>
+            <div>
+              <div class="item-title">打车到公司</div>
+              <div class="item-meta">09:12 · 交通</div>
+            </div>
+            <div class="expense">-¥42.5</div>
+          </div>
+          <div class="item">
+            <div class="icon shop"><i class="fa-solid fa-bag-shopping"></i></div>
+            <div>
+              <div class="item-title">补充办公用品</div>
+              <div class="item-meta">16:40 · 购物</div>
+            </div>
+            <div class="expense">-¥128</div>
+          </div>
+          <div class="item">
+            <div class="icon food"><i class="fa-solid fa-mug-hot"></i></div>
+            <div>
+              <div class="item-title">咖啡</div>
+              <div class="item-meta">15:08 · 餐饮</div>
+            </div>
+            <div class="expense">-¥28</div>
+          </div>
+        </div>
+      </section>
+
+      <nav class="tabbar" aria-label="主导航">
+        <div class="tab active"><i class="fa-solid fa-receipt"></i><span>记账</span></div>
+        <div class="tab"><i class="fa-solid fa-chart-column"></i><span>统计</span></div>
+        <div class="tab"><i class="fa-solid fa-clock-rotate-left"></i><span>历史</span></div>
+        <div class="tab"><i class="fa-solid fa-gear"></i><span>设置</span></div>
+      </nav>
+    </main>
+  </body>
+</html>

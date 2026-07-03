@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>设置</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  </head>
+  <body class="prototype-page">
+    <main class="phone">
+      <div class="status-bar">
+        <span>9:41</span>
+        <div class="status-icons">
+          <i class="fa-solid fa-signal"></i>
+          <i class="fa-solid fa-wifi"></i>
+          <i class="fa-solid fa-battery-three-quarters"></i>
+        </div>
+      </div>
+      <header class="app-header">
+        <div>
+          <p class="eyebrow">偏好与数据</p>
+          <h1>设置</h1>
+        </div>
+        <i class="fa-regular fa-circle-question soft-text"></i>
+      </header>
+      <section class="content">
+        <div class="settings-group">
+          <div class="setting-row">
+            <div class="setting-left">
+              <i class="fa-solid fa-yen-sign" style="background: var(--green);"></i>
+              <div>
+                <div class="item-title">货币单位</div>
+                <div class="item-meta">人民币、美元、欧元</div>
+              </div>
+            </div>
+            <span class="value">人民币 <i class="fa-solid fa-chevron-right"></i></span>
+          </div>
+        </div>
+
+        <div class="section-title">
+          <h2>分类管理</h2>
+          <button class="add-category-trigger" type="button" onclick="document.querySelector('#addCategorySheet').classList.remove('is-hidden')">
+            <i class="fa-solid fa-plus"></i> 新增
+          </button>
+        </div>
+        <div class="settings-group" style="margin-top: 0;">
+          <div class="setting-row">
+            <div class="setting-left"><i class="fa-solid fa-utensils food"></i><span class="item-title">餐饮</span></div>
+            <span class="value">编辑 <i class="fa-solid fa-chevron-right"></i></span>
+          </div>
+          <div class="setting-row">
+            <div class="setting-left"><i class="fa-solid fa-car traffic"></i><span class="item-title">交通</span></div>
+            <span class="value">编辑 <i class="fa-solid fa-chevron-right"></i></span>
+          </div>
+          <div class="setting-row">
+            <div class="setting-left"><i class="fa-solid fa-bag-shopping shop"></i><span class="item-title">购物</span></div>
+            <span class="value">编辑 <i class="fa-solid fa-chevron-right"></i></span>
+          </div>
+          <div class="setting-row">
+            <div class="setting-left"><i class="fa-solid fa-house home"></i><span class="item-title">居家</span></div>
+            <span class="value">编辑 <i class="fa-solid fa-chevron-right"></i></span>
+          </div>
+        </div>
+
+        <div class="section-title">
+          <h2>数据管理</h2>
+        </div>
+        <div class="settings-group" style="margin-top: 0;">
+          <div class="setting-row">
+            <div class="setting-left">
+              <i class="fa-solid fa-file-csv" style="background: var(--blue);"></i>
+              <div>
+                <div class="item-title">导出 CSV 数据</div>
+                <div class="item-meta">包含金额、标题、时间、分类</div>
+              </div>
+            </div>
+            <i class="fa-solid fa-chevron-right value"></i>
+          </div>
+          <div class="setting-row">
+            <div class="setting-left">
+              <i class="fa-solid fa-trash" style="background: var(--red);"></i>
+              <div>
+                <div class="item-title danger">清除所有数据</div>
+                <div class="item-meta">操作前二次确认</div>
+              </div>
+            </div>
+            <i class="fa-solid fa-chevron-right value"></i>
+          </div>
+        </div>
+      </section>
+      <nav class="tabbar" aria-label="主导航">
+        <div class="tab"><i class="fa-solid fa-receipt"></i><span>记账</span></div>
+        <div class="tab"><i class="fa-solid fa-chart-column"></i><span>统计</span></div>
+        <div class="tab"><i class="fa-solid fa-clock-rotate-left"></i><span>历史</span></div>
+        <div class="tab active"><i class="fa-solid fa-gear"></i><span>设置</span></div>
+      </nav>
+
+      <section class="popup-scrim is-hidden" id="addCategorySheet" aria-label="新增分类">
+        <div class="sheet">
+          <div class="grabber"></div>
+          <div class="row">
+            <h2>新增分类</h2>
+            <i class="fa-solid fa-xmark soft-text" onclick="document.querySelector('#addCategorySheet').classList.add('is-hidden')"></i>
+          </div>
+          <div class="form-grid">
+            <div class="field">
+              <label>分类名称</label>
+              <input value="娱乐" aria-label="分类名称" data-category-name />
+            </div>
+            <div>
+              <h3 style="margin: 2px 0 8px;">选择图标</h3>
+              <div class="option-grid">
+                <button class="icon-option active" type="button" data-icon="fa-gamepad"><i class="fa-solid fa-gamepad"></i></button>
+                <button class="icon-option" type="button" data-icon="fa-film"><i class="fa-solid fa-film"></i></button>
+                <button class="icon-option" type="button" data-icon="fa-plane"><i class="fa-solid fa-plane"></i></button>
+                <button class="icon-option" type="button" data-icon="fa-heart-pulse"><i class="fa-solid fa-heart-pulse"></i></button>
+                <button class="icon-option" type="button" data-icon="fa-music"><i class="fa-solid fa-music"></i></button>
+              </div>
+            </div>
+            <div>
+              <h3 style="margin: 2px 0 8px;">背景色</h3>
+              <div class="option-grid">
+                <button class="color-option active" type="button" data-color="#ec4899"><span class="swatch" style="background: #ec4899;"></span></button>
+                <button class="color-option" type="button" data-color="#f97316"><span class="swatch" style="background: #f97316;"></span></button>
+                <button class="color-option" type="button" data-color="#0d9488"><span class="swatch" style="background: #0d9488;"></span></button>
+                <button class="color-option" type="button" data-color="#2563eb"><span class="swatch" style="background: #2563eb;"></span></button>
+                <button class="color-option" type="button" data-color="#7c3aed"><span class="swatch" style="background: #7c3aed;"></span></button>
+              </div>
+            </div>
+            <div class="preview-category">
+              <div class="icon" style="background: #ec4899;" data-preview-icon><i class="fa-solid fa-gamepad"></i></div>
+              <div>
+                <div class="item-title" data-preview-name>娱乐</div>
+                <div class="item-meta">新增后可用于记账分类</div>
+              </div>
+            </div>
+            <button class="primary-btn">保存分类</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      const sheet = document.querySelector("#addCategorySheet");
+      const nameInput = sheet.querySelector("[data-category-name]");
+      const previewName = sheet.querySelector("[data-preview-name]");
+      const previewIcon = sheet.querySelector("[data-preview-icon]");
+
+      nameInput.addEventListener("input", () => {
+        previewName.textContent = nameInput.value.trim() || "未命名分类";
+      });
+
+      sheet.querySelectorAll("[data-icon]").forEach((button) => {
+        button.addEventListener("click", () => {
+          sheet.querySelectorAll("[data-icon]").forEach((item) => item.classList.remove("active"));
+          button.classList.add("active");
+          previewIcon.innerHTML = `<i class="fa-solid ${button.dataset.icon}"></i>`;
+        });
+      });
+
+      sheet.querySelectorAll("[data-color]").forEach((button) => {
+        button.addEventListener("click", () => {
+          sheet.querySelectorAll("[data-color]").forEach((item) => item.classList.remove("active"));
+          button.classList.add("active");
+          previewIcon.style.background = button.dataset.color;
+        });
+      });
+    </script>
+  </body>
+</html>

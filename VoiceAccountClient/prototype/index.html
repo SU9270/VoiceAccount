@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>语音记账 iOS 原型</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="index-body">
+    <header class="index-header">
+      <p class="eyebrow">Voice Expense · iPhone 15 Pro Prototype</p>
+      <h1>语音记账 iOS 应用高保真原型</h1>
+    </header>
+
+    <section class="analysis">
+      <article class="card">
+        <h2>UX 分析</h2>
+        <ul>
+          <li>核心用户需求是低摩擦记录支出，语音长按适合移动中快速录入，手动输入覆盖安静场景和纠错。</li>
+          <li>首屏优先呈现本月支出、预算剩余和今日记录，让用户进入 App 后立即理解当前消费状态。</li>
+          <li>统计采用月、季度、年分段切换，趋势和分类分布分别回答“花费何时变多”和“钱花在哪里”。</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h2>界面规划</h2>
+        <ul>
+          <li>底部四 Tab：记账、统计、历史、设置，符合 iOS 高频工具类应用的信息架构。</li>
+          <li>记账页承载新增入口与当天流水；历史页按天归档，避免和统计页职责重叠。</li>
+          <li>设置页分为货币、分类、数据管理三组，支持分类增删改查、CSV 导出和清空数据。</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h2>UI 规范</h2>
+        <ul>
+          <li>使用 iOS 风格状态栏、底部 Tab、底部 sheet、分段控件和系统字体栈。</li>
+          <li>颜色按功能区分：蓝色操作、绿色正向状态、红色支出与危险操作，分类使用稳定色标。</li>
+          <li>所有页面按 390 × 844 模拟 iPhone 15 Pro，圆角设备框用于开发评审时平铺查看。</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="frames">
+      <article class="frame-card">
+        <h2 class="frame-title">记账首页</h2>
+        <div class="device"><iframe src="account.html" title="记账首页"></iframe></div>
+      </article>
+      <article class="frame-card">
+        <h2 class="frame-title">手动输入 Popup</h2>
+        <div class="device"><iframe src="manual-entry.html" title="手动输入 Popup"></iframe></div>
+      </article>
+      <article class="frame-card">
+        <h2 class="frame-title">统计</h2>
+        <div class="device"><iframe src="stats.html" title="统计"></iframe></div>
+      </article>
+      <article class="frame-card">
+        <h2 class="frame-title">历史</h2>
+        <div class="device"><iframe src="history.html" title="历史"></iframe></div>
+      </article>
+      <article class="frame-card">
+        <h2 class="frame-title">设置</h2>
+        <div class="device"><iframe src="settings.html" title="设置"></iframe></div>
+      </article>
+      <article class="frame-card">
+        <h2 class="frame-title">新增分类 Popup</h2>
+        <div class="device"><iframe src="settings-add-category.html" title="新增分类 Popup"></iframe></div>
+      </article>
+    </section>
+  </body>
+</html>

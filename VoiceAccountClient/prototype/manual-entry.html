@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>手动输入弹层</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  </head>
+  <body class="prototype-page">
+    <main class="phone">
+      <div class="status-bar">
+        <span>9:41</span>
+        <div class="status-icons">
+          <i class="fa-solid fa-signal"></i>
+          <i class="fa-solid fa-wifi"></i>
+          <i class="fa-solid fa-battery-three-quarters"></i>
+        </div>
+      </div>
+
+      <header class="app-header">
+        <div>
+          <p class="eyebrow">2026 年 5 月</p>
+          <h1>记账</h1>
+        </div>
+        <i class="fa-regular fa-bell soft-text" aria-hidden="true"></i>
+      </header>
+
+      <section class="content">
+        <div class="card summary-card">
+          <div class="summary-row">
+            <span class="white-soft">本月支出</span>
+            <span class="chip"><i class="fa-solid fa-arrow-trend-down"></i> 较上月 -8%</span>
+          </div>
+          <div class="amount-xl">¥ 4,268.50</div>
+          <div class="summary-row" style="margin-top: 16px;">
+            <span class="white-soft">预算剩余 ¥ 1,731.50</span>
+            <span class="white-soft">每日均值 ¥ 137.69</span>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button class="action-btn mic">
+            <i class="fa-solid fa-microphone-lines"></i>
+            长按语音输入
+          </button>
+          <button class="action-btn manual">
+            <i class="fa-solid fa-plus"></i>
+            手动输入
+          </button>
+        </div>
+      </section>
+
+      <nav class="tabbar" aria-label="主导航">
+        <div class="tab active"><i class="fa-solid fa-receipt"></i><span>记账</span></div>
+        <div class="tab"><i class="fa-solid fa-chart-column"></i><span>统计</span></div>
+        <div class="tab"><i class="fa-solid fa-clock-rotate-left"></i><span>历史</span></div>
+        <div class="tab"><i class="fa-solid fa-gear"></i><span>设置</span></div>
+      </nav>
+
+      <section class="popup-scrim" aria-label="新增支出">
+        <div class="sheet">
+          <div class="grabber"></div>
+          <div class="row">
+            <h2>新增支出</h2>
+            <i class="fa-solid fa-xmark soft-text"></i>
+          </div>
+          <div class="form-grid">
+            <div class="field">
+              <label>金额</label>
+              <div class="fake-input">¥ 86.00</div>
+            </div>
+            <div class="field">
+              <label>标题</label>
+              <div class="fake-input">晚餐</div>
+            </div>
+            <div class="field">
+              <label>时间</label>
+              <div class="fake-input">今天 19:24</div>
+            </div>
+            <div>
+              <h3 style="margin: 2px 0 8px;">分类</h3>
+              <div class="category-grid">
+                <div class="category active"><i class="fa-solid fa-utensils"></i>餐饮</div>
+                <div class="category"><i class="fa-solid fa-car"></i>交通</div>
+                <div class="category"><i class="fa-solid fa-bag-shopping"></i>购物</div>
+                <div class="category"><i class="fa-solid fa-house"></i>居家</div>
+              </div>
+            </div>
+            <button class="primary-btn">保存</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
